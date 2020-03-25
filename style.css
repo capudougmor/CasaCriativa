@@ -5,7 +5,37 @@ body {
     background: #e5e5e5;
     color: #25282b;
 
-    text-align: center;
+    text-align: left;
+    margin: 0;
+}
+
+#container {
+    width: 90%;
+    max-width: 980px;
+
+    margin: 40px auto; 
+
+    display: flex;/*filhos em linha */
+}
+
+#intro {
+    width: 300px;
+
+    margin-right: 20px;
+
+}
+
+main {
+    margin: 32px 0;
+
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;/* justificado conjunto com os display*/
+    
+    margin-bottom: 32px;
+
 }
 
 button {
@@ -14,6 +44,8 @@ button {
 
     font-weight: bold;
     background: none;
+
+    cursor: pointer;
     
 }
 
@@ -22,8 +54,9 @@ button {
     background: #ff5e84;
 }
 
-#footer {
+footer {
     text-align: center;
+    margin-bottom: 32px;
 }
 
 #footer a {
