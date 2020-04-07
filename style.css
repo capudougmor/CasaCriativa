@@ -1,70 +1,255 @@
 /*
-css
-cascading style */
+        css
+        cascading style */
 body {
+    margin: 0;
     background: #e5e5e5;
     color: #25282b;
 
-    text-align: left;
-    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: flex;
+}
+
+
+a {
+    color: #ff5e84;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a:hover {
+    color: #ff5e84;
+    font-weight: bold;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 #container {
-    width: 90%;
     max-width: 980px;
+    width: 90%;
+    margin: 32px auto;
 
-    margin: 40px auto; 
-
-    display: flex;/*filhos em linha */
-}
+    display: flex;    
+} 
 
 #intro {
-    width: 300px;
-
-    margin-right: 20px;
-
+    max-width: 500px;
+    width: 90%;
+    margin: 0 20px;
 }
 
 main {
-    margin: 32px 0;
-
+    margin: 32px 0px;
 }
 
-#buttons {
-    display: flex;
-    justify-content: space-evenly;/* justificado conjunto com os display*/
-    
-    margin-bottom: 32px;
-
-}
-
-button {
+section button {
     color: #ff5e84;
     border: none;
 
+    font-size: 14px;
     font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
     background: none;
 
-    cursor: pointer;
-    
+    margin-bottom: 32px;    
 }
 
-.fat {                
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.fat {                
     color: white;
     background: #ff5e84;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    box-shadow: 0px 8px 16px #ff5e8434;
 }
 
 footer {
     text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.2px;
+    background: none;
+}
+
+footer a {
+    opacity: 0.6;
+}
+
+#coracao {
+    height: 16px;
+    text-align: center;
+}
+
+.idea {
+    display: flex;
+
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 16px -8px #25282b32;
+    border-radius: 8px;
+
+    padding: 32px;
+
     margin-bottom: 32px;
 }
 
-#footer a {
-    color: #25282b;
-    text-decoration: none;
+.idea img {
+    width: 60px;
+    height: 60px;
 
+    margin-right: 32px;
 }
 
-.hide {
-    display: none;
+.idea h2 {
+    margin-right: 0px;
+}
+
+.idea p {
+    margin: 0;
+    color: #777;
+}
+
+.description {
+    margin: 16px 0;
+}
+
+/*Modal*/
+#modal {
+    background: #ff5e84;
+
+    position: absolute;
+
+    
+    width: 100vw;
+    height: 100vmax;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal .content {
+    margin-top: 100px; 
+
+    color: white;
+}
+
+#modal .content h1 {
+    text-transform: uppercase;
+}
+
+#modal .content form {
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+
+    gap: 16px;
+}
+
+#modal .content form div:nth-child(3),
+#modal .content form div:nth-child(4),
+#modal .content form div:nth-child(5) {
+    grid-column:span 2;
+}
+
+#modal .content form input, textarea {
+    width: 100%;
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    border: 1px solid #c5637a31;
+
+    outline: none;
+
+    font-size: 16px;
+}
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+    width: 140px;
+    height: 40px;
+    margin-top: 0;
+
+    background: #ffffff22;
+    border: none;
+    border-radius: 6px;
+
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    align-self: flex-end;    
+}
+
+#modal .content form a:hover {
+    background-color: white;
+    color: #ff5e84;
+
+    transition: 0.3s;
+}
+
+#modal .content form button {
+    width: 140px;
+    height: 40px;
+
+    background: white;
+    border: none;
+    border-radius: 6px;
+
+    color: #ff5e84;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+
+    grid-column: 2;
+    justify-self: right;
+    
+}
+
+#modal .content form button:hover {
+    background-color: #0984e3;
+    color: white;
+
+    transition: 0.3s;
 }
