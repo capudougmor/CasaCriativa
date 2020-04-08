@@ -11,17 +11,43 @@ body {
     display: flex;
 }
 
+body.hideScroll {
+    overflow: hidden;
+}
+
 
 a {
     color: #ff5e84;
     font-weight: bolder;
-    text-decoration: none;
-    margin-top: 20px;
+    text-decoration: none;  
+    cursor: pointer;   
+    
 }
 
 a:hover {
     color: #ff5e84;
     font-weight: bold;
+}
+
+.button{                
+    background: #ff5e84;
+    color: white;
+
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    box-shadow: 0px 8px 16px #ff5e8434;
+    transition: 0.3s;
+}
+
+.button:hover {
+    color: #ff5e84;
+    background-color: #0984e3;
 }
 
 p, .description {
@@ -48,7 +74,13 @@ main {
     margin: 32px 0px;
 }
 
-section button {
+section.buttons {
+    display: flex;  
+    
+    margin-bottom: 32px;    
+}
+
+section.buttons button {
     color: #ff5e84;
     border: none;
 
@@ -58,25 +90,9 @@ section button {
     letter-spacing: 0.2px;
     background: none;
 
-    margin-bottom: 32px;    
-}
-
-button:hover {
-    text-decoration: underline;
     cursor: pointer;
-    transition: 0.3s;
-}
 
-button.fat {                
-    color: white;
-    background: #ff5e84;
-
-    width: 150px;
-    height: 40px;
-
-    border-radius: 6px;
-
-    box-shadow: 0px 8px 16px #ff5e8434;
+    margin: 0 10px;
 }
 
 footer {
@@ -136,13 +152,15 @@ footer a {
     background: #ff5e84;
 
     position: absolute;
-
+    top: 0;
     
-    width: 100vw;
-    height: 100vmax;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     display: flex;
-    align-items: center;
+
     justify-content: center;
 
     transition: 0.3s;
@@ -153,8 +171,12 @@ footer a {
     visibility: hidden;
 }
 
+#modal.addScroll {
+    overflow: auto;
+}
+
 #modal .content {
-    margin-top: 100px; 
+    margin-top: 15%; 
 
     color: white;
 }
@@ -168,7 +190,7 @@ footer a {
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 15%;
 
     display: grid;
     grid-template-columns: 1fr 1fr ;
@@ -252,4 +274,64 @@ form a {
     color: white;
 
     transition: 0.3s;
+}
+
+/* idea.htmal*/
+
+#page-ideias #container {
+    display: block;
+}
+
+#page-ideias #container header {
+    display: flex;
+    justify-content: space-between;
+}
+#page-ideias #container header nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias #container header nav li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+
+#page-ideias #container header nav li:last-child {
+    width: 140px;
+    height: 40px;
+
+    background-color: #ff5e84;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+
+section#title {
+    margin: 64px 0;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+section#ideias .idea {
+    margin: 0;
 }
