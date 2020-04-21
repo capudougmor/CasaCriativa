@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Ideias-Casa criativa</title>
+{% endblock %}
+
+
+
+{% set bodyId = "page-ideias" %} <!-- cria uma variavel e envia para o layout-->
+
+{% block content %}
+    <header>
+        <a href="/">
+            <img src="/logo.png" alt="Logo casa criativa">
+        </a>
+        <nav>
+            <li><a href="/">Início</a></li>
+            <li><a class="button" onclick="onOff()">Nova Ideia</a></li>
+        </nav>
+    </header>
+    
+    <section id="title">
+        <p>em exibição</p>
+        <h1>Ideias</h1>
+    </section>
+    
+    <main>
+        <section id="ideias">
+
+            {% include "all_ideas.html" %}
+
+        </section>
+    </main>
+
+    <footer>
+        Com <img id="coracao" src="https://image.flaticon.com/icons/svg/1489/1489937.svg" alt="Icon coração">
+        <a href="http://rocketseat.com" target="blank">Rocketseat</a>
+    </footer>
+
+{% endblock %}
